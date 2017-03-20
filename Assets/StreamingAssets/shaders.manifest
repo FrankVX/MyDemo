@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2121216742
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8e64fcb63644b301a1f1935c8014aaa5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 80729077cb39806c86b5c10073f074fb
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Shaders/Compiled-StandardSpecular.shader
+Dependencies: []
