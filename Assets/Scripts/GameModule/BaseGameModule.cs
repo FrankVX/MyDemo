@@ -9,6 +9,11 @@ public class BaseGameModule : GameNetBehaviour
     protected override void Awake()
     {
         base.Awake();
+       
+    }
+
+    void RegsiterHandlers()
+    {
         var methods = GetType().GetMethods(System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic);
         Handler handler = new Handler();
         handler.identity = netIdentity;
@@ -23,13 +28,27 @@ public class BaseGameModule : GameNetBehaviour
         NetMessageHandler.RegsiterHandler(handler);
     }
 
-    private void Command(string name, params object[] args)
+    public override void OnStartClient()
     {
-        NetMessageHandler.SendMsg(connectionToServer, netId, name, args);
+        base.OnStartClient();
+        RegsiterHandlers();
     }
 
-    private void RPC(string name, NetworkConnection target, params object[] args)
+    public void Command(string name, params object[] args)
+    {
+        NetMessageHandler.SendMsg(Clien.connection, netId, name, args);
+    }
+
+    public void RPC(string name, NetworkConnection target, params object[] args)
     {
         NetMessageHandler.SendMsg(target, netId, name, args);
+    }
+
+    public void RPCAll(string name, params object[] args)
+    {
+        foreach (var net in NetworkServer.connections)
+        {
+            NetMessageHandler.SendMsg(net, netId, name, args);
+        }
     }
 }

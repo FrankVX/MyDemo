@@ -15,8 +15,8 @@ public class PlayerMoveController : MoveController
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    NavMeshHit navHit;
-                    if (NavMesh.SamplePosition(hit.point, out navHit, 10, -1))
+                    UnityEngine.AI.NavMeshHit navHit;
+                    if (UnityEngine.AI.NavMesh.SamplePosition(hit.point, out navHit, 10, -1))
                     {
                         CmdMove(navHit.position);
                     }
@@ -28,8 +28,8 @@ public class PlayerMoveController : MoveController
     [Command]
     void CmdMove(Vector3 pos)
     {
-        NavMeshHit navHit;
-        if (NavMesh.SamplePosition(pos, out navHit, 10, -1))
+        UnityEngine.AI.NavMeshHit navHit;
+        if (UnityEngine.AI.NavMesh.SamplePosition(pos, out navHit, 10, -1))
         {
             RpcSyncMove(navHit.position);
         }

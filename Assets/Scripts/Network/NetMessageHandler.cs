@@ -190,8 +190,13 @@ public class NetMessageHandler
         watch.Reset();
     }
 
-    static NetMessageHandler()
+    public static void ServerStart()
     {
         NetworkServer.RegisterHandler(99, OnReceiveMessage);
+    }
+
+    public static void ClientStart(NetworkConnection server)
+    {
+        server.RegisterHandler(99, OnReceiveMessage);
     }
 }

@@ -14,7 +14,7 @@ public class ChatBoxView : GameBehaviour
     {
         base.Awake();
         AddListener(GameMsgType.ShowChat, "ShowChat");
-        input.onEndEdit.AddListener(str => Dispatch(GameMsgType.SendChat, str));
+        input.onEndEdit.AddListener(str => GetSignal<SendChatText>().Dispatch(str));
     }
 
     void ShowChat(string text)
