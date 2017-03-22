@@ -8,14 +8,14 @@ public abstract class SignalBase
 {
     protected Dictionary<Type, MethodInfo> events = new Dictionary<Type, MethodInfo>();
 
-    protected List<object> handlers = new List<object>();
+    protected List<Delegate> handlers = new List<Delegate>();
 
-    protected virtual void AddListener(object handler)
+    protected virtual void AddListener(Delegate handler)
     {
         handlers.Add(handler);
     }
 
-    protected virtual void RemoveListener(object handler)
+    protected virtual void RemoveListener(Delegate handler)
     {
         if (handlers.Contains(handler))
             handlers.Remove(handler);
@@ -32,26 +32,30 @@ public abstract class SignalBase
             Invoke(h, args);
     }
 
-    protected void Invoke(object handle, object[] args)
+    protected void Invoke(Delegate handle, object[] args)
     {
-        var type = handle.GetType();
-        MethodInfo m;
-        if (events.ContainsKey(type))
-        {
-            m = events[type];
-        }
-        else
-        {
-            m = type.GetMethod("Invoke");
-            events[type] = m;
-        }
-        if (m != null)
-            m.Invoke(handle, args);
+        if (handle != null)
+            handle.DynamicInvoke(args);
+        //var type = handle.GetType();
+        //MethodInfo m;
+        //if (events.ContainsKey(type))
+        //{
+        //    m = events[type];
+        //}
+        //else
+        //{
+        //    m = type.GetMethod("Invoke");
+        //    events[type] = m;
+        //}
+        //if (m != null)
+        //    m.Invoke(handle, args);
     }
 
 }
 public class Signal : SignalBase
 {
+    public event Action handler;
+
     public void AddListener(Action handler)
     {
         base.AddListener(handler);
@@ -65,11 +69,14 @@ public class Signal : SignalBase
     public void Dispatch()
     {
         base.Dispatch(null);
+        if (handler != null) Invoke(handler, null);
     }
 }
 
 public class Signal<T> : SignalBase
 {
+    public event Action<T> handler;
+
     public void AddListener(Action<T> handler)
     {
         base.AddListener(handler);
@@ -83,6 +90,7 @@ public class Signal<T> : SignalBase
     public void Dispatch(T arg)
     {
         base.Dispatch(arg);
+        if (handler != null) Invoke(handler, new object[] { arg });
     }
 }
 

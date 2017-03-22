@@ -7,19 +7,6 @@ using System;
 public class ChatModule : BaseGameModule
 {
 
-    void OnReceiveMsg(NetworkMessage msg)
-    {
-        RpcSendTextAll(string.Concat(
-            msg.conn.connectionId,
-            "  :    ",
-            msg.ReadMessage<StringMessage>().value)
-            );
-    }
-
-    void SendText(string text)
-    {
-        Clien.Send((short)88, new StringMessage(text));
-    }
 
     [ClientRpc]
     public void RpcSendTextAll(string text)
@@ -35,10 +22,19 @@ public class ChatModule : BaseGameModule
     public override void OnStartClient()
     {
         base.OnStartClient();
-        AddListener(GameMsgType.SendChat, "SendText");
-        NetworkServer.RegisterHandler(88, OnReceiveMsg);
+        //AddListener(GameMsgType.SendChat, "SendText");
+        GetSignal<SendChatText>().handler += SendChatText;
         gameObject.SetActive(true);
         CreatInstance("UI/ChatUI");
     }
 
+    private void SendChatText(string obj)
+    {
+        Command("OnClientSendChatText", obj);
+    }
+    [Msg]
+    void OnClientSendChatText(string text)
+    {
+        RpcSendTextAll(text);
+    }
 }

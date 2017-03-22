@@ -39,6 +39,7 @@ public class MainNetWorkManager : NetworkManager
         NetworkServer.ClearHandlers();
     }
 
+
     public override void OnServerConnect(NetworkConnection conn)
     {
         base.OnServerConnect(conn);
@@ -98,13 +99,14 @@ public class MainNetWorkManager : NetworkManager
     {
         print("OnStartServer");
         base.OnStartServer();
-
+        NetMessageHandler.ServerStart();
     }
 
     public override void OnStartClient(NetworkClient client)
     {
         print("OnStartClient");
         base.OnStartClient(client);
+        NetMessageHandler.ClientStart(client.connection);
     }
     public override void OnClientNotReady(NetworkConnection conn)
     {
