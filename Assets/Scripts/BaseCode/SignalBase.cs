@@ -21,7 +21,7 @@ public abstract class SignalBase
             handlers.Remove(handler);
     }
 
-    public void Clear()
+    public virtual void Clear()
     {
         handlers.Clear();
     }
@@ -36,19 +36,6 @@ public abstract class SignalBase
     {
         if (handle != null)
             handle.DynamicInvoke(args);
-        //var type = handle.GetType();
-        //MethodInfo m;
-        //if (events.ContainsKey(type))
-        //{
-        //    m = events[type];
-        //}
-        //else
-        //{
-        //    m = type.GetMethod("Invoke");
-        //    events[type] = m;
-        //}
-        //if (m != null)
-        //    m.Invoke(handle, args);
     }
 
 }
@@ -64,6 +51,12 @@ public class Signal : SignalBase
     public void RemoveListener(Action handler)
     {
         base.RemoveListener(handler);
+    }
+
+    public override void Clear()
+    {
+        base.Clear();
+        handler = null;
     }
 
     public void Dispatch()
@@ -87,6 +80,12 @@ public class Signal<T> : SignalBase
         base.RemoveListener(handler);
     }
 
+    public override void Clear()
+    {
+        base.Clear();
+        handler = null;
+    }
+
     public void Dispatch(T arg)
     {
         base.Dispatch(arg);
@@ -96,6 +95,8 @@ public class Signal<T> : SignalBase
 
 public class Signal<T, T2> : SignalBase
 {
+    public event Action<T, T2> handler;
+
     public void AddListener(Action<T, T2> handler)
     {
         base.AddListener(handler);
@@ -107,11 +108,18 @@ public class Signal<T, T2> : SignalBase
     public void Dispatch(T arg, T2 arg2)
     {
         base.Dispatch(arg, arg2);
+        if (handler != null) Invoke(handler, new object[] { arg });
+    }
+    public override void Clear()
+    {
+        base.Clear();
+        handler = null;
     }
 }
 
 public class Signal<T, T2, T3> : SignalBase
 {
+    public event Action<T, T2, T3> handler;
 
     public void AddListener(Action<T, T2, T3> handler)
     {
@@ -124,11 +132,18 @@ public class Signal<T, T2, T3> : SignalBase
     public void Dispatch(T arg, T2 arg2, T3 arg3)
     {
         base.Dispatch(arg, arg2, arg3);
+        if (handler != null) Invoke(handler, new object[] { arg });
+    }
+    public override void Clear()
+    {
+        base.Clear();
+        handler = null;
     }
 }
 
 public class Signal<T, T2, T3, T4> : SignalBase
 {
+    public event Action<T, T2, T3,T4> handler;
     public void AddListener(Action<T, T2, T3, T4> handler)
     {
         base.AddListener(handler);
@@ -140,10 +155,12 @@ public class Signal<T, T2, T3, T4> : SignalBase
     public void Dispatch(T arg, T2 arg2, T3 arg3, T4 arg4)
     {
         base.Dispatch(arg, arg2, arg3, arg4);
+        if (handler != null) Invoke(handler, new object[] { arg });
     }
 
+    public override void Clear()
+    {
+        base.Clear();
+        handler = null;
+    }
 }
-
-public class test : Signal<string> { }
-
-public class test2 : Signal<string, int> { }

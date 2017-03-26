@@ -9,13 +9,8 @@ public class Test : MonoBehaviour
     bool flag = false;
     void Awake()
     {
-        test2 t2 = new test2();
-        GameObject ttt = new GameObject();
-        var t = ttt.AddComponent<Test2>();
-        t2.AddListener(t.sss);
-        t2.Dispatch("sdsd", 4213);
-        DestroyImmediate(ttt);
-        t2.Dispatch("sdsd", 2233);
+
+
     }
     
     // Update is called once per frame

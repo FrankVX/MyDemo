@@ -20,7 +20,7 @@ public class BaseGameModule : GameNetBehaviour
         handler.module = this;
         foreach (var m in methods)
         {
-            if (m.IsDefined(typeof(MsgAttribute), true))
+            if (m.IsDefined(typeof(ServerAttribute), true))
             {
                 handler.AddMethod(m);
             }

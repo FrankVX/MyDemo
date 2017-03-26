@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SendChatText : Signal<string> { }
+public class ClientModule : BaseGameModule
+{
 
-
+    
+}

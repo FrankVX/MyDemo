@@ -5,10 +5,6 @@ using System;
 using System.Reflection;
 using System.Diagnostics;
 
-public class MsgAttribute : Attribute
-{
-
-}
 
 public class Handler
 {
