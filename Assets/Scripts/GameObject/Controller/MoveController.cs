@@ -9,12 +9,12 @@ public class MoveController : BaseController
 
     public new GameActor Owner { get { return base.Owner as GameActor; } }
 
-    protected UnityEngine.AI.NavMeshAgent nma;
+    protected NavMeshAgent nma;
     public override void Init(GameObj owner)
     {
         base.Init(owner);
-        nma = Owner.GetComponent<UnityEngine.AI.NavMeshAgent>();
-        if (!nma) nma = Owner.gameObject.AddComponent<UnityEngine.AI.NavMeshAgent>();
+        nma = Owner.GetComponent<NavMeshAgent>();
+        if (!nma) nma = Owner.gameObject.AddComponent<NavMeshAgent>();
     }
 
     public override void OnStartClient()
