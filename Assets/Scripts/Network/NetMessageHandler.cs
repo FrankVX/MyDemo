@@ -185,7 +185,8 @@ public class NetMessageHandler
                 (arg as MessageBase).Serialize(writer);
             }
         }
-        connection.SendWriter(writer, 1);
+        NetworkManager.singleton.client.SendWriter(writer, 1);
+        //connection.SendWriter(writer, 1);
         UnityEngine.Debug.Log("send" + watch.ElapsedMilliseconds);
         watch.Reset();
     }

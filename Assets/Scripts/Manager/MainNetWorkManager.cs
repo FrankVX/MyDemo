@@ -106,7 +106,6 @@ public class MainNetWorkManager : NetworkManager
     {
         print("OnStartClient");
         base.OnStartClient(client);
-        NetMessageHandler.ClientStart(client.connection);
     }
     public override void OnClientNotReady(NetworkConnection conn)
     {
