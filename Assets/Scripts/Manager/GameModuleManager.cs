@@ -9,12 +9,23 @@ public class GameModuleManager : Singleton<GameModuleManager>
     public override void Init()
     {
         base.Init();
-        AddListener(GameMsgType.ServerStart, "OnServerStart");
-        CreatModules();
-        RegisterModeles();
+        AddListener(ServerGlobalMsg.ServerStart, "OnServerStart");
     }
 
-    void OnServerStart()
+    private void OnServerStart()
+    {
+        CreatModules(typeof(ServerModule));
+        SpwanModule();
+    }
+
+
+    void OnClientStart()
+    {
+        CreatModules(typeof(ClientModule));
+        SpwanModule();
+    }
+
+    void SpwanModule()
     {
         foreach (var obj in modules)
         {
@@ -22,13 +33,13 @@ public class GameModuleManager : Singleton<GameModuleManager>
         }
     }
 
-    private void CreatModules()
+
+    private void CreatModules(Type moduleType)
     {
-        var baseType = typeof(BaseGameModule);
         for (int i = 0; i < GameManager.types.Length; i++)
         {
             var type = GameManager.types[i];
-            if (type.IsSubclassOf(baseType))
+            if (type.IsSubclassOf(moduleType))
             {
                 BaseGameModule instance = new GameObject(type.Name).AddComponent(type) as BaseGameModule;
                 DontDestroyOnLoad(instance.gameObject);
@@ -36,6 +47,7 @@ public class GameModuleManager : Singleton<GameModuleManager>
                 modules.Add(type, instance);
             }
         }
+        RegisterModeles();
     }
 
     private void RegisterModeles()

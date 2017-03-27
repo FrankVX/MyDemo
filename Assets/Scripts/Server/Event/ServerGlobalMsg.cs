@@ -8,13 +8,9 @@ public class EventTypeAttribute : Attribute
 
 }
 [EventType]
-public enum GameMsgType : short
+public enum ServerGlobalMsg : short
 {
-    None = MsgType.Highest + 1,
     ServerStart,
     ServerStop,
-    ShowChat,
-    SendChat
-
 }
 

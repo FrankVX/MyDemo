@@ -13,8 +13,6 @@ public class ChatBoxView : GameBehaviour
     protected override void Awake()
     {
         base.Awake();
-        AddListener(GameMsgType.ShowChat, "ShowChat");
-        input.onEndEdit.AddListener(str => GetSignal<SendChatText>().Dispatch(str));
     }
 
     void ShowChat(string text)
