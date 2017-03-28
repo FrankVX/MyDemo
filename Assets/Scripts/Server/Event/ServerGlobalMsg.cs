@@ -12,5 +12,7 @@ public enum ServerGlobalMsg : short
 {
     ServerStart,
     ServerStop,
+    OnClientConnect,
+    OnClienReady,
 }
 

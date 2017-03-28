@@ -6,48 +6,57 @@ using System;
 public class GameModuleManager : Singleton<GameModuleManager>
 {
     Dictionary<Type, BaseGameModule> modules = new Dictionary<Type, BaseGameModule>();
+    public readonly NetworkHash128 assetid = NetworkHash128.Parse("GameModule");
     public override void Init()
     {
         base.Init();
-        AddListener(ServerGlobalMsg.ServerStart, "OnServerStart");
-    }
-
-    private void OnServerStart()
-    {
-        CreatModules(typeof(ServerModule));
-        SpwanModule();
-    }
-
-
-    void OnClientStart()
-    {
-        CreatModules(typeof(ClientModule));
-        SpwanModule();
-    }
-
-    void SpwanModule()
-    {
-        foreach (var obj in modules)
-        {
-            NetworkServer.Spawn(obj.Value.gameObject, NetworkHash128.Parse(obj.Key.Name));
-        }
-    }
-
-
-    private void CreatModules(Type moduleType)
-    {
-        for (int i = 0; i < GameManager.types.Length; i++)
-        {
-            var type = GameManager.types[i];
-            if (type.IsSubclassOf(moduleType))
-            {
-                BaseGameModule instance = new GameObject(type.Name).AddComponent(type) as BaseGameModule;
-                DontDestroyOnLoad(instance.gameObject);
-                instance.transform.parent = transform;
-                modules.Add(type, instance);
-            }
-        }
+        CreatModules();
         RegisterModeles();
+        AddListener(ServerGlobalMsg.ServerStart, "OnServerStart");
+        AddListener(ServerGlobalMsg.OnClienReady, "OnClienReady");
+        //ClientScene.RegisterSpawnHandler(assetid, SpawnGamemodule, UnSpawnGamemodule);
+    }
+
+    GameObject SpawnGamemodule(Vector3 position, NetworkHash128 assetId)
+    {
+        GameObject obj = Instantiate(ResourcesManager.Instance.LoadAsset("Prefab/PlayerData"));
+        obj.transform.parent = transform;
+        return obj;
+    }
+
+    void UnSpawnGamemodule(GameObject obj)
+    {
+
+    }
+
+    void OnServerStart()
+    {
+        foreach (var m in modules.Values)
+        {
+            NetworkServer.Spawn(m.gameObject);
+        }
+    }
+
+
+    void OnClienReady(NetworkConnection conn)
+    {
+        var obj = SpawnGamemodule(Vector3.zero, assetid);
+        var data = obj.GetComponent<UserDataContainer>();
+        data.Owner = conn;
+        NetworkServer.SpawnWithClientAuthority(obj, assetid, conn);
+    }
+
+
+    private void CreatModules()
+    {
+        var types = GameManager.GetSubTypes<BaseGameModule>();
+        foreach (var type in types)
+        {
+            GameObject obj = new GameObject(type.Name);
+            obj.transform.SetParent(transform);
+            var module = obj.AddComponent(type) as BaseGameModule;
+            modules[type] = module;
+        }
     }
 
     private void RegisterModeles()

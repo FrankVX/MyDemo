@@ -8,16 +8,6 @@ public class GameObj : GameNetBehaviour
     Dictionary<Type, BaseController> controllers = new Dictionary<Type, BaseController>();
     List<Type> mTypes = new List<Type>();
 
-    public override void OnStartClient()
-    {
-        base.OnStartClient();
-        print("OnStartClient");
-    }
-
-    private void Start()
-    {
-        print("Start");
-    }
 
     public virtual void InitControllers() { }
 

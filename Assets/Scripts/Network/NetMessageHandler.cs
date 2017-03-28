@@ -27,10 +27,8 @@ public class NetMessageHandler
         handlers[handler.identity.netId] = handler;
     }
 
-    private static void OnReceiveMessage(NetworkMessage msg)
+    private static void OnReceiveCommand(NetworkMessage msg)
     {
-        Stopwatch watch = new Stopwatch();
-        watch.Start();
         var sender = msg.conn;
         var id = msg.reader.ReadNetworkId();
         Handler handler;
@@ -45,7 +43,11 @@ public class NetMessageHandler
         for (int i = 0; i < ps.Length; i++)
         {
             var pt = ps[i].ParameterType;
-            if (pt.Equals(typeof(int)))
+            if (pt.Equals(typeof(NetworkConnection)))
+            {
+                args[i] = sender;
+            }
+            else if (pt.Equals(typeof(int)))
             {
                 args[i] = msg.reader.ReadInt32();
             }
@@ -121,15 +123,11 @@ public class NetMessageHandler
             }
         }
         method.Invoke(handler.module, args);
-        UnityEngine.Debug.Log("receive" + watch.ElapsedMilliseconds);
-        watch.Reset();
     }
 
 
-    public static void SendMsg(NetworkConnection connection, NetworkInstanceId id, string name, params object[] args)
+    public static void SendCommand(NetworkInstanceId id, string name, object[] args)
     {
-        Stopwatch watch = new Stopwatch();
-        watch.Start();
         NetworkWriter writer = new NetworkWriter();
         writer.StartMessage(99);
         writer.Write(id);
@@ -182,18 +180,15 @@ public class NetMessageHandler
             }
         }
         NetworkManager.singleton.client.SendWriter(writer, 1);
-        //connection.SendWriter(writer, 1);
-        UnityEngine.Debug.Log("send" + watch.ElapsedMilliseconds);
-        watch.Reset();
     }
 
     public static void ServerStart()
     {
-        NetworkServer.RegisterHandler(99, OnReceiveMessage);
+        NetworkServer.RegisterHandler(99, OnReceiveCommand);
     }
 
     public static void ClientStart(NetworkConnection server)
     {
-        server.RegisterHandler(99, OnReceiveMessage);
+        server.RegisterHandler(99, OnReceiveCommand);
     }
 }
