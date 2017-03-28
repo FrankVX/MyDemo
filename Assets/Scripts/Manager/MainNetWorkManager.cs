@@ -62,7 +62,6 @@ public class MainNetWorkManager : NetworkManager
         ClientScene.Ready(conn);
         //if (!NetworkServer.active) ClientScene.AddPlayer(0);
         ClientScene.AddPlayer(0);
-
     }
 
 }
