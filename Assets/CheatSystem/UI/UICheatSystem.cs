@@ -18,9 +18,13 @@ namespace MC.CheatNs
             {
                 if (!_instance)
                 {
-                    GameObject o = Resources.Load<GameObject>("[CheatSystem]");
-                    o = GameObject.Instantiate<GameObject>(o);
-                    o.name = "[CheatSystem]";
+                    GameObject o = GameObject.Find("[CheatSystem]");
+                    if (o == null)
+                    {
+                        o = Resources.Load<GameObject>("[CheatSystem]");
+                        o = GameObject.Instantiate<GameObject>(o);
+                        o.name = "[CheatSystem]";
+                    }
                     _instance = o.GetComponent<UICheatSystem>();
                     o.SetActive(false);
                 }

@@ -29,10 +29,16 @@ public class GameManager : GameBehaviour
         }
         return m_types;
     }
+
+    protected override void Awake()
+    {
+        base.Awake();
+        DontDestroyOnLoad(gameObject);
+    }
     protected override void Start()
     {
         Instance = this;
-        base.Awake();
+        base.Start();
         InitGame();
     }
 
