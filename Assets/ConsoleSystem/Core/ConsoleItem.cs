@@ -1,18 +1,16 @@
-﻿//创建作者：Wangjiaying
-//创建日期：2016.12.13
-//主要功能：
+﻿
 
 
 using System.Reflection;
 
 namespace MC.CheatNs
 {
-    public class CheatItem
+    public class ConsoleItem
     {
 
         private string _commandList;
 
-        public CheatItem()
+        public ConsoleItem()
         {
 
 

@@ -1,6 +1,4 @@
-﻿//创建作者：Wangjiaying
-//创建日期：2016.12.13
-//主要功能：
+﻿
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -8,28 +6,30 @@ using UnityEngine.UI;
 
 namespace MC.CheatNs
 {
-    public class UICheatSystem : MonoBehaviour, UnityEngine.EventSystems.IPointerClickHandler
+    public class UIConsoleSystem : MonoBehaviour, UnityEngine.EventSystems.IPointerClickHandler
     {
 
-        public static UICheatSystem _instance;
-        public static UICheatSystem GetInstance
+        public static UIConsoleSystem _instance;
+        public static UIConsoleSystem GetInstance
         {
             get
             {
                 if (!_instance)
                 {
-                    GameObject o = GameObject.Find("[CheatSystem]");
-                    if (o == null)
-                    {
-                        o = Resources.Load<GameObject>("[CheatSystem]");
-                        o = GameObject.Instantiate<GameObject>(o);
-                        o.name = "[CheatSystem]";
-                    }
-                    _instance = o.GetComponent<UICheatSystem>();
+                    GameObject o = Resources.Load<GameObject>("[ConsoleSystem]");
+                    o = GameObject.Instantiate<GameObject>(o);
+                    _instance = o.GetComponent<UIConsoleSystem>();
                     o.SetActive(false);
                 }
                 return _instance;
             }
+        }
+
+        private void Awake()
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+            gameObject.SetActive(false);
         }
 
         [SerializeField]
@@ -52,7 +52,7 @@ namespace MC.CheatNs
             RefreshTips();
             _contentText.text = "";
             Application.logMessageReceived += OnLogEvent;
-            CheatSystemManager.GetInstance.OnTargetChange += () => { RefreshTips(); };
+            ConsoleSystemManager.GetInstance.OnTargetChange += () => { RefreshTips(); };
 
             _input.onEndEdit.AddListener((command) =>
             {
@@ -73,7 +73,7 @@ namespace MC.CheatNs
 
                     _historyCmdIndex = _commandTenpList.Count - 1;
 
-                    string res = CheatSystemManager.GetInstance.RunCommand(command);
+                    string res = ConsoleSystemManager.GetInstance.RunCommand(command);
                     //若是密码，这儿的回显也处理一下
                     if (_input.contentType == InputField.ContentType.Password)
                         command = new string('*', command.Length);
@@ -114,6 +114,7 @@ namespace MC.CheatNs
                 if (_historyCmdIndex < 0)
                     _historyCmdIndex = 0;
                 _input.text = _commandTenpList[_historyCmdIndex];
+                _input.selectionFocusPosition = _input.text.Length;
             }
 
             if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -123,17 +124,18 @@ namespace MC.CheatNs
                 if (_historyCmdIndex >= _commandTenpList.Count)
                     _historyCmdIndex = _commandTenpList.Count - 1;
                 _input.text = _commandTenpList[_historyCmdIndex];
+                _input.selectionFocusPosition = _input.text.Length;
             }
 
             if (Input.GetMouseButtonDown(0))
-                CheatSystemManager.GetInstance.RayCheckTarget();
+                ConsoleSystemManager.GetInstance.RayCheckTarget();
             //if (Input.GetKeyDown(KeyCode.Return))
             //    _return = true;
         }
 
         public void Active()
         {
-            CheatSystemManager.GetInstance.ResetTarget();
+            ConsoleSystemManager.GetInstance.ResetTarget();
             RefreshTips();
             //_input.text = "";
             _input.ActivateInputField();
@@ -143,8 +145,8 @@ namespace MC.CheatNs
 
         public void RefreshTips()
         {
-            _targetText.text = "当前目标：" + (CheatSystemManager.GetInstance.Target == null ? "无" : CheatSystemManager.GetInstance.Target.Name);
-            _tipsText.text = CheatSystemManager.GetInstance.GetCheatCommandTips();
+            _targetText.text = "当前目标：" + (ConsoleSystemManager.GetInstance.Target == null ? "无" : ConsoleSystemManager.GetInstance.Target.Name);
+            _tipsText.text = ConsoleSystemManager.GetInstance.GetCheatCommandTips();
         }
 
         public void ClearText()

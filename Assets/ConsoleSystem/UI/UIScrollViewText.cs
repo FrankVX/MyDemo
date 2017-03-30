@@ -1,6 +1,4 @@
-﻿//创建作者：Wangjiaying
-//创建日期：2016.12.13
-//主要功能：
+﻿
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,6 +25,18 @@ namespace MC.UI
         [SerializeField]
         private bool _jumpToLast = true;//显示完毕，是够跳至在最后
 
+        ScrollRect scrollRect;
+
+        private void Awake()
+        {
+            scrollRect = GetComponent<ScrollRect>();
+        }
+
+        private void Start()
+        {
+            ResizeScrollHeight();
+        }
+
         public string text
         {
             get
@@ -43,18 +53,12 @@ namespace MC.UI
 
                     CheckCanDeleteText();
                     ResizeScrollHeight();
-                    if (_jumpToLast)
-                        _slider.value = 0;
-                    else _slider.value = 1;
                 }
                 else
                 {
                     _content.text = value;
                     CheckCanDeleteText();
                     ResizeScrollHeight();
-                    if (_jumpToLast)
-                        _slider.value = 0;
-                    else _slider.value = 1;
                 }
             }
         }
@@ -82,6 +86,10 @@ namespace MC.UI
         {
             _scrollContentRect.sizeDelta = new Vector2(_scrollContentRect.sizeDelta.x, _content.preferredHeight);
             _content.rectTransform.sizeDelta = new Vector2(_content.rectTransform.sizeDelta.x, _content.preferredHeight);
+
+            scrollRect.CalculateLayoutInputVertical();
+            if (_jumpToLast)
+                scrollRect.verticalNormalizedPosition = 0;
         }
 
         public void AddText(string txt, float closeTime)

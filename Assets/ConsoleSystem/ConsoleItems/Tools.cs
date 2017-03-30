@@ -1,6 +1,4 @@
-﻿//创建作者：Wangjiaying
-//创建日期：2016.12.14
-//主要功能：
+﻿
 
 using System;
 using System.IO;
@@ -11,7 +9,7 @@ using UnityEngine;
 namespace MC.CheatNs
 {
     [CommandInfo("工具命令，系统、工具相关接口，如硬件信息等")]
-    public class Tools : CheatItem
+    public class Tools : ConsoleItem
     {
         [CommandInfo("显示系统信息")]
         public string SystemInfo()

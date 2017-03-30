@@ -1,7 +1,4 @@
-﻿//创建作者：Wangjiaying
-//创建日期：2016.12.13
-//主要功能：
-
+﻿
 
 namespace MC.CheatNs
 {
@@ -16,11 +13,11 @@ namespace MC.CheatNs
         {
             get
             {
-                return (int)CheatSystemManager.GetInstance.CurrenLevel >= (int)_rootLevel;
+                return (int)ConsoleSystemManager.GetInstance.CurrenLevel >= (int)_rootLevel;
             }
         }
 
-        public string LevelName { get { return CheatSystemManager.GetInstance.GetRootLevelDetail(_rootLevel).Name; } }
+        public string LevelName { get { return ConsoleSystemManager.GetInstance.GetRootLevelDetail(_rootLevel).Name; } }
 
         public CommandInfo(string str, EnumRootLevel level = EnumRootLevel.Player)
         {

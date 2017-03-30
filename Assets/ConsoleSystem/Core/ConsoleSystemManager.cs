@@ -1,6 +1,4 @@
-﻿//创建作者：Wangjiaying
-//创建日期：2016.12.13
-//主要功能：
+﻿
 
 
 using System;
@@ -9,7 +7,7 @@ using System.Reflection;
 
 namespace MC.CheatNs
 {
-    public class CheatSystemManager
+    public class ConsoleSystemManager
     {
         //======可自定义设置=============
         //修改返回值，当第一次打开控制台，没有任何目标时，默认会设置的目标
@@ -17,14 +15,14 @@ namespace MC.CheatNs
         private ICheatDetectable DefaultTarget { get { return null; } }
 
 
-        private static CheatSystemManager _instance;
-        public static CheatSystemManager GetInstance
+        private static ConsoleSystemManager _instance;
+        public static ConsoleSystemManager GetInstance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new CheatSystemManager();
+                    _instance = new ConsoleSystemManager();
                 }
                 return _instance;
             }
@@ -57,9 +55,9 @@ namespace MC.CheatNs
         private EnumRootLevel _currentLevel;
         public EnumRootLevel CurrenLevel { get { return _currentLevel; } set { _currentLevel = value; } }
 
-        private List<CheatItem> _cheatItems = new List<CheatItem>();
+        private List<ConsoleItem> _cheatItems = new List<ConsoleItem>();
 
-        public CheatSystemManager()
+        public ConsoleSystemManager()
         {
             Init();
 
@@ -87,7 +85,7 @@ namespace MC.CheatNs
             //    return GetCommandList();
             command = command.Trim();
             string[] cmds = command.Split(' ');
-            CheatItem item = _cheatItems.Find((i) => i.GetType().Name.ToLower() == cmds[0].ToLower());
+            ConsoleItem item = _cheatItems.Find((i) => i.GetType().Name.ToLower() == cmds[0].ToLower());
 
             if (item == null)
                 return "<color=#FF00FF>错误：未找到命令 [" + cmds[0] + "]</color>\n有关命令帮助，请输入“Help”查看.";
@@ -125,7 +123,7 @@ namespace MC.CheatNs
 
             try
             {
-                MethodInfo met = item.GetType().GetMethod(name);
+                MethodInfo met = item.GetType().GetMethod(name, BindingFlags.IgnoreCase | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
                 CommandInfo info = GetCommandInfo(met);
                 if (!info.CanExecute)
                 {
@@ -145,7 +143,7 @@ namespace MC.CheatNs
 
         public string GetTargetCommandHelp(string cmdName)
         {
-            CheatItem item = _cheatItems.Find((i) => i.GetType().Name == cmdName);
+            ConsoleItem item = _cheatItems.Find((i) => i.GetType().Name == cmdName);
             if (item == null)
                 return "<color=#FF00FF>错误：未找到指定命令 [" + cmdName + "]</color>";
 
@@ -191,7 +189,7 @@ namespace MC.CheatNs
 
         private void Init()
         {
-            Type cit = typeof(CheatItem);
+            Type cit = typeof(ConsoleItem);
             Assembly asm = this.GetType().Assembly;
             Type[] types = asm.GetTypes();
 
@@ -199,7 +197,7 @@ namespace MC.CheatNs
             {
                 if (types[i].IsSubclassOf(cit))
                 {
-                    CheatItem item = asm.CreateInstance(types[i].FullName) as CheatItem;
+                    ConsoleItem item = asm.CreateInstance(types[i].FullName) as ConsoleItem;
                     _cheatItems.Add(item);
                 }
             }
