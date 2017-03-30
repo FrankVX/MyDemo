@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class ClientModule : BaseGameModule
+public class ClientModule : GameBehaviour
 {
-
     
+
 }
 
 

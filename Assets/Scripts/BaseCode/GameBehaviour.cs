@@ -4,10 +4,12 @@ using UnityEngine.Networking;
 
 public class GameBehaviour : MonoBehaviour
 {
-    public T GetSingleton<T>() where T : Singleton
+    public virtual T GetSingleton<T>() where T : Singleton
     { return SingletonManager.Instance.GetInstance<T>(); }
-    public T GetModule<T>() where T : BaseGameModule
+    public virtual T GetModule<T>() where T : GameBehaviour
     { return GameModuleManager.Instance.GetModule<T>(); }
+    public virtual T GetMediator<T>() where T : ModuleMediator
+    { return ModuleMediatorManager.Instance.GetMediator<T>(); }
 
     public GameObject CreatInstance(string path) { return Spawn(LoadAsset(path)); }
 

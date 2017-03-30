@@ -3,13 +3,19 @@ using System.Collections;
 using UnityEngine.Networking;
 using System;
 
-public class BaseGameModule : GameNetBehaviour
+public class ModuleMediator : GameNetBehaviour
 {
+
+    protected override void Awake()
+    {
+        base.Awake();
+    }
 
     public override void OnStartServer()
     {
         base.OnStartServer();
         RegsitCommand();
+
     }
 
     void RegsitCommand()

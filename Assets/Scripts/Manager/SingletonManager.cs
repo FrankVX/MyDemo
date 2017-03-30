@@ -8,7 +8,12 @@ public class SingletonManager : Singleton<SingletonManager>
 {
     public static new SingletonManager Instance
     {
-        get { if (instance == null) instance = CreatInstance<SingletonManager>(); ; return instance; }
+        get
+        {
+            if (instance == null)
+                instance = CreatInstance<SingletonManager>();
+            return instance;
+        }
     }
     static SingletonManager instance;
 

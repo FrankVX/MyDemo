@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
-
+[EventType]
 public enum ChatEvent
 {
     SendChat,
@@ -20,7 +20,13 @@ class ChatModuleClient : ClientModule
 
     void SendChat(string text)
     {
-        Command("SendChat", text);
+        //Command("SendChat", text);
+        GetMediator<ChatMediator>().Command("SendChat", text);
+    }
+
+    public void ShowChat(string text)
+    {
+        Dispatch(ChatEvent.ShowChat, text);
     }
 }
 

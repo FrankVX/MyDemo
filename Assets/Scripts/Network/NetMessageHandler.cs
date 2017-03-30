@@ -10,7 +10,7 @@ public class Handler
 {
     public Dictionary<string, MethodInfo> methodInfos = new Dictionary<string, MethodInfo>();
     public NetworkIdentity identity;
-    public BaseGameModule module;
+    public ModuleMediator module;
 
     public void AddMethod(MethodInfo info)
     {
@@ -128,6 +128,7 @@ public class NetMessageHandler
 
     public static void SendCommand(NetworkInstanceId id, string name, object[] args)
     {
+        GameManager.Instance.Dispatch(ChatEvent.ShowChat, string.Format("SendCommand, id={0},name={1}", id, name));
         NetworkWriter writer = new NetworkWriter();
         writer.StartMessage(99);
         writer.Write(id);
@@ -179,6 +180,7 @@ public class NetMessageHandler
                 (arg as MessageBase).Serialize(writer);
             }
         }
+        writer.FinishMessage();
         NetworkManager.singleton.client.SendWriter(writer, 1);
     }
 

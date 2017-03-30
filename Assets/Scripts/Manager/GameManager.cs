@@ -29,28 +29,23 @@ public class GameManager : GameBehaviour
         }
         return m_types;
     }
-    protected override void Awake()
+    protected override void Start()
     {
         Instance = this;
         base.Awake();
         InitGame();
-        StartGame();
     }
 
-    void StartGame()
-    {
-        gameObject.AddComponent<NetworkManagerHUD>();
-    }
+
 
     void InitGame()
     {
-        GetSingleton<SingletonManager>();
+        //GetSingleton<SingletonManager>();
         GetSingleton<ResourcesManager>();
         GetSingleton<PoolSpawnManager>();
         GetSingleton<NetPrefabManager>();
         GetSingleton<GameModuleManager>();
-        gameObject.AddComponent<MainNetWorkManager>().gameManager = this;
-
+        GetSingleton<ModuleMediatorManager>();
     }
 
 }

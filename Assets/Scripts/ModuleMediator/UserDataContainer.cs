@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -6,6 +7,8 @@ using UnityEngine.Networking;
 public class UserDataContainer : GameNetBehaviour
 {
     public NetworkConnection Owner { get; set; }
+
+    Dictionary<Type, UserDataBase> datas = new Dictionary<Type, UserDataBase>();
     protected override void Awake()
     {
         base.Awake();
@@ -17,8 +20,19 @@ public class UserDataContainer : GameNetBehaviour
         var types = GameManager.GetSubTypes<UserDataBase>();
         foreach (var type in types)
         {
-            gameObject.AddComponent(type);
+            datas[type] = gameObject.AddComponent(type) as UserDataBase;
         }
+    }
+
+    public T GetDataComponent<T>() where T : UserDataBase
+    {
+        var type = typeof(T);
+        UserDataBase data;
+        if (datas.TryGetValue(type, out data))
+        {
+            return data as T;
+        }
+        return null;
     }
 
     public override bool OnRebuildObservers(HashSet<NetworkConnection> observers, bool initialize)

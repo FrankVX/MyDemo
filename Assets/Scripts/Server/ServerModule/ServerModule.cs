@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ServerModule : BaseGameModule
+public class ServerModule : GameBehaviour
 {
 
 

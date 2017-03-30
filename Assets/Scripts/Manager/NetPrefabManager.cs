@@ -2,9 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine.Networking;
 
+public class SpwanHandle
+{
+    public SpawnDelegate handle;
+    public NetworkHash128 assetId;
+    public GameObject prefab;
+}
+
 public class NetPrefabManager : Singleton<NetPrefabManager>
 {
-    Dictionary<NetworkHash128, Object> alllPrefabs = new Dictionary<NetworkHash128, Object>();
+    Dictionary<NetworkHash128, SpwanHandle> alllPrefabs = new Dictionary<NetworkHash128, SpwanHandle>();
 
     public override void Init()
     {
@@ -19,14 +26,34 @@ public class NetPrefabManager : Singleton<NetPrefabManager>
         foreach (var obj in objs)
         {
             var ni = obj as NetworkIdentity;
-            ClientScene.RegisterSpawnHandler(ni.assetId, SpawnGameObject, UpSpawnGameObject);
-            alllPrefabs[ni.assetId] = ni.gameObject;
+            var handle = new SpwanHandle() { assetId = ni.assetId, prefab = ni.gameObject };
+            RegisterNetObj(handle);
         }
+    }
+
+    public void RegisterNetObj(SpwanHandle handle)
+    {
+        alllPrefabs[handle.assetId] = handle;
+        ClientScene.RegisterSpawnHandler(handle.assetId, SpawnGameObject, UpSpawnGameObject);
+        Dispatch(ChatEvent.ShowChat, string.Format("RegisterNetObj,assid ={0}", handle.assetId));
     }
 
     GameObject SpawnGameObject(Vector3 pos, NetworkHash128 assetId)
     {
-        return PoolSpawnManager.Instance.Spawn(alllPrefabs[assetId] as GameObject);
+        Dispatch(ChatEvent.ShowChat, string.Format("SpawnGameObject01,assid ={0}", assetId));
+        var handle = alllPrefabs[assetId];
+        GameObject obj = null;
+        if (handle.handle != null)
+        {
+            obj = handle.handle(pos, assetId);
+        }
+        if (obj == null && handle.prefab != null)
+        {
+            obj = PoolSpawnManager.Instance.Spawn(alllPrefabs[assetId].prefab);
+            if (obj) obj.transform.parent = transform;
+        }
+        Dispatch(ChatEvent.ShowChat, string.Format("SpawnGameObject02,assid ={0} name={1}", assetId, obj.name));
+        return obj;
     }
 
     void UpSpawnGameObject(GameObject obj)
