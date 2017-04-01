@@ -35,12 +35,12 @@ public class NetPrefabManager : Singleton<NetPrefabManager>
     {
         alllPrefabs[handle.assetId] = handle;
         ClientScene.RegisterSpawnHandler(handle.assetId, SpawnGameObject, UpSpawnGameObject);
-        Dispatch(ChatEvent.ShowChat, string.Format("RegisterNetObj,assid ={0}", handle.assetId));
+        Debug.Log(string.Format("RegisterNetObj,assid ={0}", handle.assetId));
     }
 
     GameObject SpawnGameObject(Vector3 pos, NetworkHash128 assetId)
     {
-        Dispatch(ChatEvent.ShowChat, string.Format("SpawnGameObject01,assid ={0}", assetId));
+        Debug.Log(string.Format("SpawnGameObject01,assid ={0}", assetId));
         var handle = alllPrefabs[assetId];
         GameObject obj = null;
         if (handle.handle != null)
@@ -52,7 +52,7 @@ public class NetPrefabManager : Singleton<NetPrefabManager>
             obj = PoolSpawnManager.Instance.Spawn(alllPrefabs[assetId].prefab);
             if (obj) obj.transform.parent = transform;
         }
-        Dispatch(ChatEvent.ShowChat, string.Format("SpawnGameObject02,assid ={0} name={1}", assetId, obj.name));
+        Debug.Log(string.Format("SpawnGameObject02,assid ={0} name={1}", assetId, obj.name));
         return obj;
     }
 

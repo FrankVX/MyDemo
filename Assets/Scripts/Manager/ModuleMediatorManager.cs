@@ -46,7 +46,7 @@ public class ModuleMediatorManager : Singleton<ModuleMediatorManager>
             handle.assetId = obj.Key;
             handle.handle = OnSpawnMediator;
             NetPrefabManager.Instance.RegisterNetObj(handle);
-            Dispatch(ChatEvent.ShowChat, string.Format("RegisterMediator name={0}", obj.Value.gameObject.name));
+            Debug.Log(string.Format("RegisterMediator name={0}", obj.Value.gameObject.name));
         }
     }
 

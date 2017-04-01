@@ -14,17 +14,22 @@ public class ChatMediator : ModuleMediator
     #region Server
 
     [Server]
-    private void SendChat(NetworkConnection conn, string text)
+    private void ReceiveChat(NetworkConnection conn, string text)
     {
         RpcShowChat(text);
     }
+
     #endregion
 
+
+    //====================================================================================================
+
+
     #region Client
-    public override void OnStartClient()
+
+    public void SendChat(string text)
     {
-        base.OnStartClient();
-        Dispatch(ChatEvent.ShowChat, string.Format("OnStartClient , id = {0},assetid = {1}", netId, netIdentity.assetId));
+        Command("ReceiveChat", text);
     }
 
 

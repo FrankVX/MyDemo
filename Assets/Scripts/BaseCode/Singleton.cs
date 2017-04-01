@@ -18,7 +18,24 @@ public class Singleton<T> : Singleton where T : Singleton<T>
     {
         get
         {
-            return SingletonManager.Instance.GetInstance<T>();
+            if (instance == null)
+                instance = SingletonManager.Instance.GetInstance<T>();
+            return instance;
         }
+    }
+
+    private static T instance;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        instance = this as T;
+        SingletonManager.Instance.RegistSingleton(this);
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        instance = null;
     }
 }

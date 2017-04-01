@@ -37,9 +37,13 @@ public class SingletonManager : Singleton<SingletonManager>
         {
             value = CreatInstance<T>();
             value.Init();
-            instances[type] = value;
         }
         return value;
+    }
+
+    public void RegistSingleton(Singleton instance)
+    {
+        instances[instance.GetType()] = instance;
     }
 
 

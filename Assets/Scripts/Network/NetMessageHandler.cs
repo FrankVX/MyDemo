@@ -175,6 +175,14 @@ public class NetMessageHandler
             {
                 writer.Write((Vector3)arg);
             }
+            else if (arg is Vector2)
+            {
+                writer.Write((Vector2)arg);
+            }
+            else if (arg is NetworkHash128)
+            {
+                writer.Write((NetworkHash128)arg);
+            }
             else if (arg is MessageBase)
             {
                 (arg as MessageBase).Serialize(writer);

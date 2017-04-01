@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 1be2052126b32d34ea59628d85039777
+timeCreated: 1490872250
+licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
     21300000: jewel_01
@@ -127,12 +129,148 @@ TextureImporter:
     21300244: motion_menu04
     21300246: motion_menu_text01
     21300248: motion_menu_text02
-  serializedVersion: 2
+    21300250: to3_0
+    21300252: to3_1
+    21300254: to3_2
+    21300256: to3_3
+    21300258: to3_4
+    21300260: to3_5
+    21300262: to3_6
+    21300264: to3_7
+    21300266: to3_8
+    21300268: to3_9
+    21300270: to3_10
+    21300272: to3_11
+    21300274: to3_12
+    21300276: to3_13
+    21300278: to3_14
+    21300280: to3_15
+    21300282: to3_16
+    21300284: to3_17
+    21300286: to3_18
+    21300288: to3_19
+    21300290: to3_20
+    21300292: to3_21
+    21300294: to3_22
+    21300296: to3_23
+    21300298: to3_24
+    21300300: to3_25
+    21300302: to3_26
+    21300304: to3_27
+    21300306: to3_28
+    21300308: to3_29
+    21300310: to3_30
+    21300312: to3_31
+    21300314: to3_32
+    21300316: to3_33
+    21300318: to3_34
+    21300320: to3_35
+    21300322: to3_36
+    21300324: to3_37
+    21300326: to3_38
+    21300328: to3_39
+    21300330: to3_40
+    21300332: to3_41
+    21300334: to3_42
+    21300336: to3_43
+    21300338: to3_44
+    21300340: to3_45
+    21300342: to3_46
+    21300344: to3_47
+    21300346: to3_48
+    21300348: to3_49
+    21300350: to3_50
+    21300352: to3_51
+    21300354: to3_52
+    21300356: to3_53
+    21300358: to3_54
+    21300360: to3_55
+    21300362: to3_56
+    21300364: to3_57
+    21300366: to3_58
+    21300368: to3_59
+    21300370: to3_60
+    21300372: to3_61
+    21300374: to3_62
+    21300376: to3_63
+    21300378: to3_64
+    21300380: to3_65
+    21300382: to3_66
+    21300384: to3_67
+    21300386: to3_68
+    21300388: to3_69
+    21300390: to3_70
+    21300392: to3_71
+    21300394: to3_72
+    21300396: to3_73
+    21300398: to3_74
+    21300400: to3_75
+    21300402: to3_76
+    21300404: to3_77
+    21300406: to3_78
+    21300408: to3_79
+    21300410: to3_80
+    21300412: to3_81
+    21300414: to3_82
+    21300416: to3_83
+    21300418: to3_84
+    21300420: to3_85
+    21300422: to3_86
+    21300424: to3_87
+    21300426: to3_88
+    21300428: to3_89
+    21300430: to3_90
+    21300432: to3_91
+    21300434: to3_92
+    21300436: to3_93
+    21300438: to3_94
+    21300440: to3_95
+    21300442: to3_96
+    21300444: to3_97
+    21300446: to3_98
+    21300448: to3_99
+    21300450: to3_100
+    21300452: to3_101
+    21300454: to3_102
+    21300456: to3_103
+    21300458: to3_104
+    21300460: to3_105
+    21300462: to3_106
+    21300464: to3_107
+    21300466: to3_108
+    21300468: to3_109
+    21300470: to3_110
+    21300472: to3_111
+    21300474: to3_112
+    21300476: to3_113
+    21300478: to3_114
+    21300480: to3_115
+    21300482: to3_116
+    21300484: to3_117
+    21300486: to3_118
+    21300488: to3_119
+    21300490: to3_120
+    21300492: to3_121
+    21300494: to3_122
+    21300496: to3_123
+    21300498: to3_124
+    21300500: to3_125
+    21300502: to3_126
+    21300504: to3_127
+    21300506: to3_128
+    21300508: to3_129
+    21300510: to3_130
+    21300512: to3_131
+    21300514: to3_132
+    21300516: to3_133
+    21300518: to3_134
+    21300520: to3_135
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -144,10 +282,8 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 1024
@@ -158,9 +294,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -168,30 +302,60 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings:
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   - buildTarget: iPhone
     maxTextureSize: 1024
-    textureFormat: -2
+    textureFormat: 2
+    textureCompression: 1
     compressionQuality: 50
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
+    overridden: 1
   - buildTarget: Windows Store Apps
     maxTextureSize: 1024
-    textureFormat: -3
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
+    overridden: 1
   - buildTarget: Android
     maxTextureSize: 1024
-    textureFormat: -3
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
+    overridden: 1
+  - buildTarget: Standalone
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jewel_01
+      name: to3_0
       rect:
         serializedVersion: 2
         x: 2
@@ -199,25 +363,25 @@ TextureImporter:
         width: 82
         height: 65
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: jewel_02
+      name: to3_1
       rect:
         serializedVersion: 2
         x: 87
         y: 958
-        width: 82
+        width: 167
         height: 65
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: jewel_04
+      name: to3_2
       rect:
         serializedVersion: 2
         x: 258
@@ -225,51 +389,51 @@ TextureImporter:
         width: 82
         height: 65
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: jewel_05
+      name: to3_3
       rect:
         serializedVersion: 2
         x: 343
         y: 958
-        width: 82
+        width: 85
         height: 65
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: jewel_06
+      name: to3_4
       rect:
         serializedVersion: 2
         x: 429
-        y: 958
+        y: 956
         width: 82
-        height: 65
+        height: 67
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: jewel_07
+      name: to3_5
       rect:
         serializedVersion: 2
         x: 515
         y: 958
-        width: 82
+        width: 85
         height: 65
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: icon_back01
+      name: to3_6
       rect:
         serializedVersion: 2
         x: 608
@@ -277,51 +441,51 @@ TextureImporter:
         width: 126
         height: 126
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: bar_yellow
+      name: to3_7
       rect:
         serializedVersion: 2
         x: 798
         y: 996
-        width: 18
+        width: 224
         height: 26
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: bar_green
+      name: to3_8
       rect:
         serializedVersion: 2
         x: 798
         y: 967
-        width: 18
+        width: 224
         height: 26
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_one_01
+      name: to3_9
       rect:
         serializedVersion: 2
         x: 3
-        y: 881
+        y: 880
         width: 74
-        height: 74
+        height: 76
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_one_02
+      name: to3_10
       rect:
         serializedVersion: 2
         x: 80
@@ -329,12 +493,12 @@ TextureImporter:
         width: 74
         height: 74
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_one_03
+      name: to3_11
       rect:
         serializedVersion: 2
         x: 157
@@ -342,12 +506,12 @@ TextureImporter:
         width: 74
         height: 74
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_one_04
+      name: to3_12
       rect:
         serializedVersion: 2
         x: 234
@@ -355,12 +519,25 @@ TextureImporter:
         width: 74
         height: 74
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_one_06
+      name: to3_13
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 791
+        width: 97
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_14
       rect:
         serializedVersion: 2
         x: 388
@@ -368,12 +545,12 @@ TextureImporter:
         width: 74
         height: 74
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: gear
+      name: to3_15
       rect:
         serializedVersion: 2
         x: 468
@@ -381,103 +558,103 @@ TextureImporter:
         width: 72
         height: 72
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: bar_black
+      name: to3_16
       rect:
         serializedVersion: 2
         x: 798
         y: 938
-        width: 18
+        width: 224
         height: 26
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: bar_red
+      name: to3_17
       rect:
         serializedVersion: 2
         x: 798
         y: 909
-        width: 18
+        width: 224
         height: 26
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_three_03
+      name: to3_18
       rect:
         serializedVersion: 2
         x: 203
         y: 791
-        width: 98
-        height: 88
+        width: 97
+        height: 89
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_three_05
+      name: to3_19
       rect:
         serializedVersion: 2
         x: 403
         y: 791
-        width: 98
-        height: 88
+        width: 97
+        height: 89
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_three_06
+      name: to3_20
       rect:
         serializedVersion: 2
         x: 503
         y: 791
-        width: 98
-        height: 88
+        width: 97
+        height: 89
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_three_07
+      name: to3_21
       rect:
         serializedVersion: 2
         x: 604
         y: 791
-        width: 98
-        height: 88
+        width: 96
+        height: 89
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: bar_back
+      name: to3_22
       rect:
         serializedVersion: 2
         x: 796
         y: 879
         width: 225
         height: 26
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_three_01
+      name: to3_23
       rect:
         serializedVersion: 2
         x: 2
@@ -485,12 +662,12 @@ TextureImporter:
         width: 98
         height: 88
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_three_02
+      name: to3_24
       rect:
         serializedVersion: 2
         x: 102
@@ -498,38 +675,38 @@ TextureImporter:
         width: 98
         height: 88
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_three_08
+      name: to3_25
       rect:
         serializedVersion: 2
         x: 704
-        y: 785
-        width: 98
-        height: 88
+        y: 784
+        width: 96
+        height: 89
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_three_09
+      name: to3_26
       rect:
         serializedVersion: 2
         x: 804
-        y: 785
-        width: 98
-        height: 88
+        y: 784
+        width: 96
+        height: 89
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_pocket_01
+      name: to3_27
       rect:
         serializedVersion: 2
         x: 3
@@ -537,12 +714,12 @@ TextureImporter:
         width: 84
         height: 84
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_pocket_02
+      name: to3_28
       rect:
         serializedVersion: 2
         x: 91
@@ -550,25 +727,25 @@ TextureImporter:
         width: 46
         height: 46
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_pocket_03
+      name: to3_29
       rect:
         serializedVersion: 2
         x: 140
-        y: 742
-        width: 46
-        height: 46
+        y: 740
+        width: 144
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_pocket_06
+      name: to3_30
       rect:
         serializedVersion: 2
         x: 287
@@ -576,51 +753,51 @@ TextureImporter:
         width: 46
         height: 46
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_pocket_07
+      name: to3_31
       rect:
         serializedVersion: 2
         x: 336
-        y: 742
-        width: 46
-        height: 46
+        y: 740
+        width: 48
+        height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: shop_body
+      name: to3_32
       rect:
         serializedVersion: 2
         x: 388
         y: 746
         width: 60
         height: 39
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: shop_hat
+      name: to3_33
       rect:
         serializedVersion: 2
         x: 456
         y: 762
         width: 70
         height: 22
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: heart
+      name: to3_34
       rect:
         serializedVersion: 2
         x: 531
@@ -628,64 +805,90 @@ TextureImporter:
         width: 45
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: best_back
+      name: to3_35
       rect:
         serializedVersion: 2
         x: 581
         y: 748
         width: 79
         height: 36
-      alignment: 9
-      pivot: {x: 0.43723965, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: best_text
+      name: to3_36
       rect:
         serializedVersion: 2
         x: 666
         y: 765
-        width: 46
-        height: 16
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2539177}
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: shop_hat2
+      name: to3_37
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 765
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_38
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 765
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_39
       rect:
         serializedVersion: 2
         x: 456
         y: 750
         width: 70
         height: 7
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: best_01
+      name: to3_40
       rect:
         serializedVersion: 2
         x: 667
         y: 744
         width: 21
-        height: 14
-      alignment: 9
-      pivot: {x: 0.4, y: 1}
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: cup_body
+      name: to3_41
       rect:
         serializedVersion: 2
         x: 2
@@ -693,12 +896,12 @@ TextureImporter:
         width: 84
         height: 53
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_box_01
+      name: to3_42
       rect:
         serializedVersion: 2
         x: 92
@@ -706,51 +909,51 @@ TextureImporter:
         width: 100
         height: 86
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_box_02
+      name: to3_43
       rect:
         serializedVersion: 2
         x: 195
         y: 652
-        width: 100
+        width: 101
         height: 86
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_box_03
+      name: to3_44
       rect:
         serializedVersion: 2
         x: 298
         y: 652
-        width: 100
+        width: 99
         height: 86
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_box_04
+      name: to3_45
       rect:
         serializedVersion: 2
         x: 401
         y: 652
-        width: 100
+        width: 99
         height: 86
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_box_05
+      name: to3_46
       rect:
         serializedVersion: 2
         x: 504
@@ -758,12 +961,12 @@ TextureImporter:
         width: 100
         height: 86
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_box_06
+      name: to3_47
       rect:
         serializedVersion: 2
         x: 608
@@ -771,12 +974,12 @@ TextureImporter:
         width: 100
         height: 86
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_box_07
+      name: to3_48
       rect:
         serializedVersion: 2
         x: 712
@@ -784,12 +987,12 @@ TextureImporter:
         width: 100
         height: 86
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_box_08
+      name: to3_49
       rect:
         serializedVersion: 2
         x: 816
@@ -797,25 +1000,25 @@ TextureImporter:
         width: 100
         height: 86
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_box_09
+      name: to3_50
       rect:
         serializedVersion: 2
         x: 921
         y: 652
-        width: 100
+        width: 99
         height: 86
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: cup_star
+      name: to3_51
       rect:
         serializedVersion: 2
         x: 3
@@ -823,25 +1026,25 @@ TextureImporter:
         width: 22
         height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: cup_down
+      name: to3_52
       rect:
         serializedVersion: 2
-        x: 57
+        x: 33
         y: 614
-        width: 30
+        width: 55
         height: 27
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_box_10
+      name: to3_53
       rect:
         serializedVersion: 2
         x: 92
@@ -849,12 +1052,12 @@ TextureImporter:
         width: 100
         height: 86
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: icon_back02
+      name: to3_54
       rect:
         serializedVersion: 2
         x: 205
@@ -862,12 +1065,12 @@ TextureImporter:
         width: 126
         height: 126
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: icon_back03
+      name: to3_55
       rect:
         serializedVersion: 2
         x: 336
@@ -875,12 +1078,12 @@ TextureImporter:
         width: 126
         height: 126
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: icon_back04
+      name: to3_56
       rect:
         serializedVersion: 2
         x: 468
@@ -888,12 +1091,12 @@ TextureImporter:
         width: 126
         height: 126
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: icon_back05
+      name: to3_57
       rect:
         serializedVersion: 2
         x: 601
@@ -901,12 +1104,12 @@ TextureImporter:
         width: 126
         height: 126
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: icon_back06
+      name: to3_58
       rect:
         serializedVersion: 2
         x: 732
@@ -914,12 +1117,12 @@ TextureImporter:
         width: 126
         height: 126
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: icon_back07
+      name: to3_59
       rect:
         serializedVersion: 2
         x: 865
@@ -927,12 +1130,12 @@ TextureImporter:
         width: 126
         height: 126
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: cup_shadow
+      name: to3_60
       rect:
         serializedVersion: 2
         x: 6
@@ -940,12 +1143,12 @@ TextureImporter:
         width: 8
         height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: letter_02
+      name: to3_61
       rect:
         serializedVersion: 2
         x: 28
@@ -953,12 +1156,12 @@ TextureImporter:
         width: 58
         height: 47
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: letter_01
+      name: to3_62
       rect:
         serializedVersion: 2
         x: 7
@@ -966,38 +1169,38 @@ TextureImporter:
         width: 64
         height: 49
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_01
+      name: to3_63
       rect:
         serializedVersion: 2
-        x: 93
-        y: 481
-        width: 70
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: button2_ani01
-      rect:
-        serializedVersion: 2
-        x: 172
-        y: 449
+        x: 97
+        y: 485
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_ani02
+      name: to3_64
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 448
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 13, y: 19, z: 14, w: 17}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_65
       rect:
         serializedVersion: 2
         x: 237
@@ -1005,51 +1208,51 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_ani03
+      name: to3_66
       rect:
         serializedVersion: 2
         x: 302
-        y: 449
+        y: 448
         width: 62
-        height: 62
+        height: 63
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_ani04
+      name: to3_67
       rect:
         serializedVersion: 2
         x: 367
-        y: 449
+        y: 448
         width: 62
-        height: 62
+        height: 63
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_ani05
+      name: to3_68
       rect:
         serializedVersion: 2
         x: 432
-        y: 449
+        y: 448
         width: 62
-        height: 62
+        height: 63
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_ani06
+      name: to3_69
       rect:
         serializedVersion: 2
         x: 497
@@ -1057,51 +1260,51 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_ani07
+      name: to3_70
       rect:
         serializedVersion: 2
         x: 562
-        y: 449
+        y: 448
         width: 62
-        height: 62
+        height: 63
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_ani08
+      name: to3_71
       rect:
         serializedVersion: 2
         x: 627
-        y: 449
+        y: 448
         width: 62
-        height: 62
+        height: 63
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_ani09
+      name: to3_72
       rect:
         serializedVersion: 2
         x: 692
-        y: 449
+        y: 448
         width: 62
-        height: 62
+        height: 63
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_ani10
+      name: to3_73
       rect:
         serializedVersion: 2
         x: 757
@@ -1109,38 +1312,77 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_ani11
+      name: to3_74
       rect:
         serializedVersion: 2
         x: 822
-        y: 449
+        y: 448
         width: 62
-        height: 62
+        height: 63
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_ani12
+      name: to3_75
       rect:
         serializedVersion: 2
         x: 888
-        y: 449
+        y: 448
         width: 62
-        height: 62
+        height: 63
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_02
+      name: to3_76
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 492
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_77
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 493
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_78
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 493
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_79
       rect:
         serializedVersion: 2
         x: 3
@@ -1148,25 +1390,64 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_03
+      name: to3_80
       rect:
         serializedVersion: 2
-        x: 72
-        y: 444
-        width: 36
-        height: 37
+        x: 73
+        y: 446
+        width: 34
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_03
+      name: to3_81
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 476
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_82
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 476
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_83
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 476
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_84
       rect:
         serializedVersion: 2
         x: 115
@@ -1174,25 +1455,64 @@ TextureImporter:
         width: 5
         height: 5
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_04
+      name: to3_85
       rect:
         serializedVersion: 2
         x: 123
         y: 468
         width: 6
         height: 5
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_02
+      name: to3_86
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 459
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_87
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 456
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_88
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 459
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_89
       rect:
         serializedVersion: 2
         x: 2
@@ -1200,25 +1520,25 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button2_01
+      name: to3_90
       rect:
         serializedVersion: 2
-        x: 70
-        y: 371
-        width: 70
-        height: 70
+        x: 74
+        y: 375
+        width: 62
+        height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_ani01
+      name: to3_91
       rect:
         serializedVersion: 2
         x: 172
@@ -1226,12 +1546,12 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_ani02
+      name: to3_92
       rect:
         serializedVersion: 2
         x: 237
@@ -1239,12 +1559,12 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_ani03
+      name: to3_93
       rect:
         serializedVersion: 2
         x: 302
@@ -1252,12 +1572,12 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_ani04
+      name: to3_94
       rect:
         serializedVersion: 2
         x: 367
@@ -1265,12 +1585,12 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_ani05
+      name: to3_95
       rect:
         serializedVersion: 2
         x: 432
@@ -1278,12 +1598,12 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_ani06
+      name: to3_96
       rect:
         serializedVersion: 2
         x: 497
@@ -1291,12 +1611,12 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_ani07
+      name: to3_97
       rect:
         serializedVersion: 2
         x: 562
@@ -1304,12 +1624,12 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_ani08
+      name: to3_98
       rect:
         serializedVersion: 2
         x: 627
@@ -1317,12 +1637,12 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_ani09
+      name: to3_99
       rect:
         serializedVersion: 2
         x: 692
@@ -1330,12 +1650,12 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_ani10
+      name: to3_100
       rect:
         serializedVersion: 2
         x: 757
@@ -1343,12 +1663,12 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_ani11
+      name: to3_101
       rect:
         serializedVersion: 2
         x: 822
@@ -1359,9 +1679,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button1_ani12
+      name: to3_102
       rect:
         serializedVersion: 2
         x: 887
@@ -1369,103 +1689,116 @@ TextureImporter:
         width: 62
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: level_up_text
+      name: to3_103
       rect:
         serializedVersion: 2
         x: 6
         y: 305
-        width: 340
+        width: 29
         height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: jewel_03
+      name: to3_104
       rect:
         serializedVersion: 2
-        x: 172
-        y: 958
-        width: 82
-        height: 65
+        x: 44
+        y: 305
+        width: 31
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_one_05
+      name: to3_105
       rect:
         serializedVersion: 2
-        x: 311
-        y: 881
-        width: 74
-        height: 74
+        x: 83
+        y: 305
+        width: 43
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_three_04
+      name: to3_106
       rect:
         serializedVersion: 2
-        x: 303
-        y: 791
-        width: 98
-        height: 88
+        x: 134
+        y: 305
+        width: 31
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_pocket_04
+      name: to3_107
       rect:
         serializedVersion: 2
-        x: 189
-        y: 742
-        width: 46
-        height: 46
+        x: 177
+        y: 305
+        width: 29
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_pocket_05
+      name: to3_108
       rect:
         serializedVersion: 2
-        x: 238
-        y: 742
-        width: 46
-        height: 46
+        x: 236
+        y: 305
+        width: 41
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: coin_twinkle
+      name: to3_109
       rect:
         serializedVersion: 2
-        x: 33
-        y: 615
-        width: 24
-        height: 26
+        x: 290
+        y: 305
+        width: 35
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: letter_back
+      name: to3_110
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 321
+        width: 12
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_111
       rect:
         serializedVersion: 2
         x: 359
@@ -1473,129 +1806,12 @@ TextureImporter:
         width: 64
         height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: bar_yellow2
-      rect:
-        serializedVersion: 2
-        x: 810
-        y: 996
-        width: 201
-        height: 26
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: bar_green2
-      rect:
-        serializedVersion: 2
-        x: 810
-        y: 967
-        width: 201
-        height: 26
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: bar_black2
-      rect:
-        serializedVersion: 2
-        x: 810
-        y: 938
-        width: 201
-        height: 26
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: bar_red2
-      rect:
-        serializedVersion: 2
-        x: 810
-        y: 909
-        width: 201
-        height: 26
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: bar_yellow3
-      rect:
-        serializedVersion: 2
-        x: 1006
-        y: 996
-        width: 16
-        height: 26
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: bar_green3
-      rect:
-        serializedVersion: 2
-        x: 1006
-        y: 967
-        width: 16
-        height: 26
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: bar_black3
-      rect:
-        serializedVersion: 2
-        x: 1006
-        y: 938
-        width: 16
-        height: 26
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: bar_red3
-      rect:
-        serializedVersion: 2
-        x: 1006
-        y: 909
-        width: 16
-        height: 26
-      alignment: 4
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: bar_back2
-      rect:
-        serializedVersion: 2
-        x: 669
-        y: 270
-        width: 354
-        height: 108
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: bar_back2_ic01
+      name: to3_112
       rect:
         serializedVersion: 2
         x: 437
@@ -1603,12 +1819,12 @@ TextureImporter:
         width: 33
         height: 45
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: bar_back2_ic02
+      name: to3_113
       rect:
         serializedVersion: 2
         x: 480
@@ -1616,12 +1832,12 @@ TextureImporter:
         width: 48
         height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: bar_back2_ic03
+      name: to3_114
       rect:
         serializedVersion: 2
         x: 540
@@ -1629,12 +1845,12 @@ TextureImporter:
         width: 44
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: bar_back2_ic04
+      name: to3_115
       rect:
         serializedVersion: 2
         x: 596
@@ -1642,12 +1858,38 @@ TextureImporter:
         width: 52
         height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button3_back01
+      name: to3_116
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 284
+        width: 326
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_117
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 305
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_118
       rect:
         serializedVersion: 2
         x: 3
@@ -1655,12 +1897,12 @@ TextureImporter:
         width: 120
         height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button3_back02
+      name: to3_119
       rect:
         serializedVersion: 2
         x: 132
@@ -1668,12 +1910,12 @@ TextureImporter:
         width: 120
         height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button3_back03
+      name: to3_120
       rect:
         serializedVersion: 2
         x: 258
@@ -1681,12 +1923,12 @@ TextureImporter:
         width: 120
         height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button3_back04
+      name: to3_121
       rect:
         serializedVersion: 2
         x: 383
@@ -1694,12 +1936,12 @@ TextureImporter:
         width: 120
         height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button3_back05
+      name: to3_122
       rect:
         serializedVersion: 2
         x: 507
@@ -1707,12 +1949,12 @@ TextureImporter:
         width: 120
         height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button3_back06
+      name: to3_123
       rect:
         serializedVersion: 2
         x: 4
@@ -1720,12 +1962,12 @@ TextureImporter:
         width: 120
         height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button3_back07
+      name: to3_124
       rect:
         serializedVersion: 2
         x: 129
@@ -1733,12 +1975,12 @@ TextureImporter:
         width: 120
         height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button3_back08
+      name: to3_125
       rect:
         serializedVersion: 2
         x: 254
@@ -1746,75 +1988,140 @@ TextureImporter:
         width: 120
         height: 120
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: button3_icon
-      rect:
-        serializedVersion: 2
-        x: 964
-        y: 456
-        width: 48
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: motion_menu03
+      name: to3_126
       rect:
         serializedVersion: 2
         x: 4
         y: 6
         width: 150
         height: 36
-      alignment: 9
-      pivot: {x: 0.23662919, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     - serializedVersion: 2
-      name: motion_menu04
+      name: to3_127
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 25
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_128
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 25
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_129
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 25
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_130
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 25
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_131
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 25
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_132
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 25
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_133
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 25
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_134
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 25
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: to3_135
       rect:
         serializedVersion: 2
         x: 160
         y: 2
         width: 27
         height: 19
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: motion_menu_text01
-      rect:
-        serializedVersion: 2
-        x: 164
-        y: 25
-        width: 65
-        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: motion_menu_text02
-      rect:
-        serializedVersion: 2
-        x: 235
-        y: 25
-        width: 47
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: -1
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

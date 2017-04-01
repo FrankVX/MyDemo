@@ -29,6 +29,11 @@ namespace MC.CheatNs
         {
             _instance = this;
             DontDestroyOnLoad(gameObject);
+            ConsoleSystemManager.GetInstance.OnTargetChange += RefreshTips;
+            _input.onEndEdit.AddListener(OnInputEnd);
+            RefreshTips();
+            _contentText.text = "";
+            Application.logMessageReceived += OnLogEvent;
             gameObject.SetActive(false);
         }
 
@@ -47,50 +52,45 @@ namespace MC.CheatNs
 
         public bool isShowLog = true;
 
-        void Start()
+
+        void OnInputEnd(string command)
         {
-            RefreshTips();
-            _contentText.text = "";
-            Application.logMessageReceived += OnLogEvent;
-            ConsoleSystemManager.GetInstance.OnTargetChange += () => { RefreshTips(); };
-
-            _input.onEndEdit.AddListener((command) =>
+            if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
             {
-                if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+                _input.text = "";
+                //if (!_return) return;
+
+                if (string.IsNullOrEmpty(command)) return;
+
+                if (_commandTenpList.Count < 1 || command != _commandTenpList[_commandTenpList.Count - 1])
                 {
-                    _input.text = "";
-                    //if (!_return) return;
-
-                    if (string.IsNullOrEmpty(command)) return;
-
-                    if (_commandTenpList.Count < 1 || command != _commandTenpList[_commandTenpList.Count - 1])
-                    {
-                        _commandTenpList.Add(command);
-                        //仅记录三十条
-                        if (_commandTenpList.Count > 30)
-                            _commandTenpList.RemoveAt(0);
-                    }
-
-                    _historyCmdIndex = _commandTenpList.Count - 1;
-
-                    string res = ConsoleSystemManager.GetInstance.RunCommand(command);
-                    //若是密码，这儿的回显也处理一下
-                    if (_input.contentType == InputField.ContentType.Password)
-                        command = new string('*', command.Length);
-                    if (!string.IsNullOrEmpty(res))
-                        _contentText.text = _contentText.text + "\n->" + command + "\n->" + res;
-
-                    //while (_contentText.preferredHeight > _contentText.rectTransform.sizeDelta.y)
-                    //{
-                    //    _contentText.text = _contentText.text.Remove(0, _contentText.text.Length > 10 ? 10 : _contentText.text.Length);
-                    //}
-
-                    _input.ActivateInputField();
-
-                    //_return = false;
+                    _commandTenpList.Add(command);
+                    //仅记录三十条
+                    if (_commandTenpList.Count > 30)
+                        _commandTenpList.RemoveAt(0);
                 }
-            });
+
+                _historyCmdIndex = _commandTenpList.Count - 1;
+
+                string res = ConsoleSystemManager.GetInstance.RunCommand(command);
+                //若是密码，这儿的回显也处理一下
+                if (_input.contentType == InputField.ContentType.Password)
+                    command = new string('*', command.Length);
+                if (!string.IsNullOrEmpty(res))
+                    _contentText.text = _contentText.text + "\n->" + command + "\n->" + res;
+
+                //while (_contentText.preferredHeight > _contentText.rectTransform.sizeDelta.y)
+                //{
+                //    _contentText.text = _contentText.text.Remove(0, _contentText.text.Length > 10 ? 10 : _contentText.text.Length);
+                //}
+
+                _input.ActivateInputField();
+
+                //_return = false;
+            }
         }
+
+
         System.Text.StringBuilder sb = new System.Text.StringBuilder();
         private void OnLogEvent(string condition, string stackTrace, LogType type)
         {

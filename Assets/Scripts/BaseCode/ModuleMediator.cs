@@ -6,16 +6,10 @@ using System;
 public class ModuleMediator : GameNetBehaviour
 {
 
-    protected override void Awake()
-    {
-        base.Awake();
-    }
-
     public override void OnStartServer()
     {
         base.OnStartServer();
         RegsitCommand();
-
     }
 
     void RegsitCommand()
@@ -34,7 +28,7 @@ public class ModuleMediator : GameNetBehaviour
         NetMessageHandler.RegsiterHandler(handler);
     }
 
-    public void Command(string name, params object[] args)
+    protected void Command(string name, params object[] args)
     {
         NetMessageHandler.SendCommand(netId, name, args);
     }

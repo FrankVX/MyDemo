@@ -20,8 +20,7 @@ class ChatModuleClient : ClientModule
 
     void SendChat(string text)
     {
-        //Command("SendChat", text);
-        GetMediator<ChatMediator>().Command("SendChat", text);
+        GetMediator<ChatMediator>().SendChat(text);
     }
 
     public void ShowChat(string text)
