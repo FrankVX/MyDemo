@@ -31,10 +31,13 @@ namespace MC.CheatNs
             DontDestroyOnLoad(gameObject);
             ConsoleSystemManager.GetInstance.OnTargetChange += RefreshTips;
             _input.onEndEdit.AddListener(OnInputEnd);
-            RefreshTips();
-            _contentText.text = "";
             Application.logMessageReceived += OnLogEvent;
             gameObject.SetActive(false);
+        }
+        private void Start()
+        {
+            RefreshTips();
+            _contentText.text = "";
         }
 
         [SerializeField]
@@ -138,7 +141,7 @@ namespace MC.CheatNs
             ConsoleSystemManager.GetInstance.ResetTarget();
             RefreshTips();
             //_input.text = "";
-            _input.ActivateInputField();
+            //_input.ActivateInputField();
             gameObject.SetActive(!gameObject.activeSelf);
 
         }

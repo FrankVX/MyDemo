@@ -36,9 +36,5 @@ public class GamePlayer : GameActor
 
     //========================================ServerCode================================
 
-    [Command]
-    public void CmdSendChatMessage(string msg, NetworkInstanceId target)
-    {
-        //Dispatcher(GameMsgType.Chat, netIdentity, msg, target);
-    }
+    
 }

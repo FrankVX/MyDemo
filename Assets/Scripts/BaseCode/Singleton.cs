@@ -38,4 +38,20 @@ public class Singleton<T> : Singleton where T : Singleton<T>
         base.OnDestroy();
         instance = null;
     }
+
+    private void RegistNetHandler()
+    {
+        var ms = GetType().GetMethods(System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic);
+        Handler handler = new Handler();
+        handler.obj = this;
+        foreach (var m in ms)
+        {
+            if (m.IsDefined(typeof(RemoteAttribute), true))
+            {
+                handler.AddMethod(m);
+            }
+        }
+        if (handler.methodInfos.Count > 0)
+            NetMessageHandler.RegsiterHandler(handler);
+    }
 }

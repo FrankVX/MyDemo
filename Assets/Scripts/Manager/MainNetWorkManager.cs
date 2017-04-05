@@ -47,15 +47,14 @@ public class MainNetWorkManager : NetworkManager
 
     public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
     {
-        var prefab = gameManager.LoadAsset("Prefab/Cube");
-        prefab.transform.position = new Vector3(10, 3, 10);
-
         if ((int)playerControllerId < conn.playerControllers.Count && conn.playerControllers[(int)playerControllerId].IsValid && conn.playerControllers[(int)playerControllerId].gameObject != null)
         {
             Debug.LogError("There is already a player at that playerControllerId for this connections.");
         }
         else
         {
+            var prefab = gameManager.LoadAsset("Prefab/Cube");
+            prefab.transform.position = new Vector3(10, 3, 10);
             GameObject player;
             player = gameManager.Spawn(prefab);
             NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);

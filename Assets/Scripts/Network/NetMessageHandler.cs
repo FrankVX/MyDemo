@@ -5,12 +5,16 @@ using System;
 using System.Reflection;
 using System.Diagnostics;
 
+public class RemoteAttribute : Attribute
+{
+
+}
 
 public class Handler
 {
     public Dictionary<string, MethodInfo> methodInfos = new Dictionary<string, MethodInfo>();
     public NetworkIdentity identity;
-    public ModuleMediator module;
+    public object obj;
 
     public void AddMethod(MethodInfo info)
     {
@@ -21,184 +25,74 @@ public class Handler
 public class NetMessageHandler
 {
     static Dictionary<NetworkInstanceId, Handler> handlers = new Dictionary<NetworkInstanceId, Handler>();
-
+    static Dictionary<string, Handler> singleClassHandlers = new Dictionary<string, Handler>();
     public static void RegsiterHandler(Handler handler)
     {
-        handlers[handler.identity.netId] = handler;
+        if (handler.identity != null)
+        {
+            handlers[handler.identity.netId] = handler;
+        }
+        else
+        {
+            singleClassHandlers[handler.obj.GetType().FullName] = handler;
+        }
     }
 
-    private static void OnReceiveCommand(NetworkMessage msg)
+    private static void OnReceiveMessage(NetworkMessage msg)
     {
         var sender = msg.conn;
-        var id = msg.reader.ReadNetworkId();
-        Handler handler;
-        if (!handlers.TryGetValue(id, out handler)) return;
-        if (handler.methodInfos == null) return;
+        Handler handler = null;
+        if (msg.reader.ReadBoolean())
+        {
+            var id = msg.reader.ReadNetworkId();
+            handlers.TryGetValue(id, out handler);
+        }
+        else
+        {
+            var className = msg.reader.ReadString();
+            singleClassHandlers.TryGetValue(className, out handler);
+        }
+        if (handler == null || handler.methodInfos == null) return;
         var name = msg.reader.ReadString();
         MethodInfo method;
         if (!handler.methodInfos.TryGetValue(name, out method)) return;
-
         var ps = method.GetParameters();
-        object[] args = new object[ps.Length];
-        for (int i = 0; i < ps.Length; i++)
-        {
-            var pt = ps[i].ParameterType;
-            if (pt.Equals(typeof(NetworkConnection)))
-            {
-                args[i] = sender;
-            }
-            else if (pt.Equals(typeof(int)))
-            {
-                args[i] = msg.reader.ReadInt32();
-            }
-            else if (pt.Equals(typeof(uint)))
-            {
-                args[i] = msg.reader.ReadUInt32();
-            }
-            else if (pt.Equals(typeof(float)))
-            {
-                args[i] = msg.reader.ReadSingle();
-            }
-            else if (pt.Equals(typeof(string)))
-            {
-                args[i] = msg.reader.ReadString();
-            }
-            else if (pt.Equals(typeof(long)))
-            {
-                args[i] = msg.reader.ReadInt64();
-            }
-            else if (pt.Equals(typeof(ulong)))
-            {
-                args[i] = msg.reader.ReadUInt64();
-            }
-            else if (pt.Equals(typeof(byte)))
-            {
-                args[i] = msg.reader.ReadByte();
-            }
-            else if (pt.Equals(typeof(char)))
-            {
-                args[i] = msg.reader.ReadChar();
-            }
-            else if (pt.Equals(typeof(bool)))
-            {
-                args[i] = msg.reader.ReadBoolean();
-            }
-            else if (pt.Equals(typeof(Vector3)))
-            {
-                args[i] = msg.reader.ReadVector3();
-            }
-            else if (pt.Equals(typeof(Vector2)))
-            {
-                args[i] = msg.reader.ReadVector2();
-            }
-            else if (pt.Equals(typeof(Transform)))
-            {
-                args[i] = msg.reader.ReadTransform();
-            }
-            else if (pt.Equals(typeof(Quaternion)))
-            {
-                args[i] = msg.reader.ReadQuaternion();
-            }
-            else if (pt.Equals(typeof(NetworkInstanceId)))
-            {
-                args[i] = msg.reader.ReadNetworkId();
-            }
-            else if (pt.Equals(typeof(NetworkIdentity)))
-            {
-                args[i] = msg.reader.ReadNetworkIdentity();
-            }
-            else if (pt.Equals(typeof(NetworkHash128)))
-            {
-                args[i] = msg.reader.ReadNetworkHash128();
-            }
-            else if (pt.Equals(typeof(GameObject)))
-            {
-                args[i] = msg.reader.ReadGameObject();
-            }
-            else if (pt.IsSubclassOf(typeof(MessageBase)))
-            {
-                var m = Activator.CreateInstance(pt) as MessageBase;
-                m.Deserialize(msg.reader);
-                args[i] = m;
-            }
-        }
-        method.Invoke(handler.module, args);
+        object[] args = msg.reader.ReadData(sender, method);
+        method.Invoke(handler.obj, args);
     }
 
 
-    public static void SendCommand(NetworkInstanceId id, string name, object[] args)
+    public static void SendMessage(NetworkConnection target, NetworkInstanceId id, string name, object[] args)
     {
-        GameManager.Instance.Dispatch(ChatEvent.ShowChat, string.Format("SendCommand, id={0},name={1}", id, name));
         NetworkWriter writer = new NetworkWriter();
         writer.StartMessage(99);
+        writer.Write(true);
         writer.Write(id);
         writer.Write(name);
-        foreach (var arg in args)
-        {
-            if (arg is int)
-            {
-                writer.Write((int)arg);
-            }
-            else if (arg is uint)
-            {
-                writer.Write((uint)arg);
-            }
-            else if (arg is string)
-            {
-                writer.Write((string)arg);
-            }
-            else if (arg is float)
-            {
-                writer.Write((float)arg);
-            }
-            else if (arg is long)
-            {
-                writer.Write((long)arg);
-            }
-            else if (arg is ulong)
-            {
-                writer.Write((ulong)arg);
-            }
-            else if (arg is byte)
-            {
-                writer.Write((byte)arg);
-            }
-            else if (arg is char)
-            {
-                writer.Write((char)arg);
-            }
-            else if (arg is bool)
-            {
-                writer.Write((bool)arg);
-            }
-            else if (arg is Vector3)
-            {
-                writer.Write((Vector3)arg);
-            }
-            else if (arg is Vector2)
-            {
-                writer.Write((Vector2)arg);
-            }
-            else if (arg is NetworkHash128)
-            {
-                writer.Write((NetworkHash128)arg);
-            }
-            else if (arg is MessageBase)
-            {
-                (arg as MessageBase).Serialize(writer);
-            }
-        }
+        writer.WriteData(args);
         writer.FinishMessage();
-        NetworkManager.singleton.client.SendWriter(writer, 1);
+        target.SendWriter(writer, 1);
+    }
+
+    public static void SendMessage(NetworkConnection target, object obj, string name, object[] args)
+    {
+        NetworkWriter writer = new NetworkWriter();
+        writer.StartMessage(99);
+        writer.Write(false);
+        writer.Write(obj.GetType().FullName);
+        writer.Write(name);
+        writer.WriteData(args);
+        writer.FinishMessage();
+        target.SendWriter(writer, 1);
     }
 
     public static void ServerStart()
     {
-        NetworkServer.RegisterHandler(99, OnReceiveCommand);
+        NetworkServer.RegisterHandler(99, OnReceiveMessage);
     }
 
     public static void ClientStart(NetworkConnection server)
     {
-        server.RegisterHandler(99, OnReceiveCommand);
+        server.RegisterHandler(99, OnReceiveMessage);
     }
 }

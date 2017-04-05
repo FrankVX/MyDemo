@@ -87,7 +87,6 @@ namespace MC.UI
             _scrollContentRect.sizeDelta = new Vector2(_scrollContentRect.sizeDelta.x, _content.preferredHeight);
             _content.rectTransform.sizeDelta = new Vector2(_content.rectTransform.sizeDelta.x, _content.preferredHeight);
 
-            scrollRect.CalculateLayoutInputVertical();
             if (_jumpToLast)
                 scrollRect.verticalNormalizedPosition = 0;
         }
